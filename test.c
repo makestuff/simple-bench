@@ -20,6 +20,10 @@
 #include <math.h>
 #include <limits.h>
 
+#if defined WIN32
+	#define inline __inline
+#endif
+
 static inline int count0(uint32_t x) {
 	return (int)x;
 }
@@ -89,7 +93,7 @@ static inline int count4(uint32_t x) {
 static char printBuf[11];
 static inline int count5(uint32_t x) {
 	sprintf(printBuf, "%u", x);
-	return strlen(printBuf);
+	return (int)strlen(printBuf);
 }
 
 void countDigits0(size_t length, const uint32_t *dataArray, int *countArray) {

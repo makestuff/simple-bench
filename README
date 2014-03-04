@@ -1,0 +1,15 @@
+$ cd $HOME
+$ mkdir simple-bench
+$ cd simple-bench
+$ wget -qO- http://makestuff.eu/bil | tar zxf -
+$ cd makestuff/apps/
+$ ../scripts/msget.sh makestuff/simple-bench
+Fetching "makestuff/simple-bench/master"...
+Uncompressing "makestuff/simple-bench/master" into "simple-bench" directory...
+Fetching "makestuff/common/master"...
+Uncompressing "makestuff/common/master" into "../common" directory...
+$ cd simple-bench/
+$ make
+$ dd if=/dev/zero of=random.dat bs=4000 count=10000
+$ lin.x64/rel/simple-bench
+  :

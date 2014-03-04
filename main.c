@@ -44,6 +44,10 @@ int main2(void) {
 int main(void) {
 	double totalTime, d;
 	int i, j;
+	int *digitsArray;
+	const char *const fileName = "random.dat";
+	size_t fileLen = 0;
+	const uint32_t *fileData;
 	#ifdef WIN32
 		LARGE_INTEGER tvStart, tvEnd, freq;
 		DWORD_PTR mask = 1;
@@ -53,10 +57,7 @@ int main(void) {
 		struct timeval tvStart, tvEnd;
 		long long startTime, endTime;
 	#endif
-	int *digitsArray;
-	const char *const fileName = "random.dat";
-	size_t fileLen = 0;
-	const uint32_t *fileData = (const uint32_t *)loadFile(fileName, &fileLen);
+	fileData = (const uint32_t *)loadFile(fileName, &fileLen);
 	if ( !fileData ) {
 		fprintf(stderr, "Unable to load %s!\n", fileName);
 		exit(1);
