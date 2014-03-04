@@ -24,52 +24,63 @@
 	#define inline __inline
 #endif
 
+const uint32_t E1 = 1UL;
+const uint32_t E2 = 10UL;
+const uint32_t E3 = 100UL;
+const uint32_t E4 = 1000UL;
+const uint32_t E5 = 10000UL;
+const uint32_t E6 = 100000UL;
+const uint32_t E7 = 1000000UL;
+const uint32_t E8 = 10000000UL;
+const uint32_t E9 = 100000000UL;
+const uint32_t E10 = 1000000000UL;
+
 static inline int count0(uint32_t x) {
 	return (int)x;
 }
 
 static inline int count1(uint32_t x) {
-    if ( x >= 1E5 ) {
-        if ( x >= 1E7 ) {
-            if ( x >= 1E8 ) {
-                return (x >= 1E9) ? 10 : 9;
+    if ( x >= E5 ) {
+        if ( x >= E7 ) {
+            if ( x >= E8 ) {
+                return (x >= E9) ? 10 : 9;
             } else {
                 return 8;
             }
         } else {
-            return (x >= 1E6) ? 7 : 6;
+            return (x >= E6) ? 7 : 6;
         }
     } else {
-        if ( x >= 1E2 ) {
-            if ( x >= 1E3 ) {
-                return (x >= 1E4) ? 5 : 4;
+        if ( x >= E2 ) {
+            if ( x >= E3 ) {
+                return (x >= E4) ? 5 : 4;
             } else {
                 return 3;
             }
         } else {
-            return (x >= 1E1) ? 2 : 1;
+            return (x >= E1) ? 2 : 1;
         }
     }
 }
 
 static inline int count2(uint32_t x) {
-    if ( x >= 1E9 ) {
+    if ( x >= E9 ) {
         return 10;
-    } else if ( x >= 1E8 ) {
+    } else if ( x >= E8 ) {
         return 9;
-    } else if ( x >= 1E7 ) {
+    } else if ( x >= E7 ) {
         return 8;
-    } else if ( x >= 1E6 ) {
+    } else if ( x >= E6 ) {
         return 7;
-    } else if ( x >= 1E5 ) {
+    } else if ( x >= E5 ) {
         return 6;
-    } else if ( x >= 1E4 ) {
+    } else if ( x >= E4 ) {
         return 5;
-    } else if ( x >= 1E3 ) {
+    } else if ( x >= E3 ) {
         return 4;
-    } else if ( x >= 1E2 ) {
+    } else if ( x >= E2 ) {
         return 3;
-    } else if ( x >= 1E1 ) {
+    } else if ( x >= E1 ) {
         return 2;
     } else {
         return 1;
