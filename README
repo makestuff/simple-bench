@@ -10,6 +10,83 @@ Fetching "makestuff/common/master"...
 Uncompressing "makestuff/common/master" into "../common" directory...
 $ cd simple-bench/
 $ make
-$ dd if=/dev/zero of=random.dat bs=4000 count=10000
+$ dd if=/dev/urandom of=random.dat bs=4000 count=100000  # 100 million uint32_t
 $ lin.x64/rel/simple-bench
-  :
+Impl 0:
+  Warm-up...
+  Run 0: 0.687310 ns
+  Run 1: 0.695380 ns
+  Run 2: 0.690230 ns
+  Run 3: 0.690840 ns
+  Run 4: 0.692290 ns
+  Run 5: 0.688610 ns
+  Run 6: 0.690210 ns
+  Run 7: 0.690770 ns
+  Run 8: 0.691580 ns
+  Run 9: 0.727200 ns
+  Avg: 0.694442 ns
+Impl 1:
+  Warm-up...
+  Run 0: 2.288860 ns
+  Run 1: 2.305160 ns
+  Run 2: 2.312670 ns
+  Run 3: 2.327200 ns
+  Run 4: 2.310980 ns
+  Run 5: 2.310500 ns
+  Run 6: 2.314390 ns
+  Run 7: 2.324240 ns
+  Run 8: 2.315560 ns
+  Run 9: 2.306190 ns
+  Avg: 2.311575 ns
+Impl 2:
+  Warm-up...
+  Run 0: 3.052930 ns
+  Run 1: 3.060530 ns
+  Run 2: 3.056160 ns
+  Run 3: 3.079280 ns
+  Run 4: 3.057570 ns
+  Run 5: 3.055550 ns
+  Run 6: 3.069030 ns
+  Run 7: 3.059270 ns
+  Run 8: 3.054050 ns
+  Run 9: 3.060160 ns
+  Avg: 3.060453 ns
+Impl 3:
+  Warm-up...
+  Run 0: 46.217900 ns
+  Run 1: 46.003260 ns
+  Run 2: 46.089930 ns
+  Run 3: 46.010290 ns
+  Run 4: 46.000070 ns
+  Run 5: 46.001600 ns
+  Run 6: 45.978740 ns
+  Run 7: 46.006020 ns
+  Run 8: 45.992950 ns
+  Run 9: 46.006950 ns
+  Avg: 46.030771 ns
+Impl 4:
+  Warm-up...
+  Run 0: 64.835880 ns
+  Run 1: 64.844380 ns
+  Run 2: 64.892150 ns
+  Run 3: 64.800900 ns
+  Run 4: 64.897080 ns
+  Run 5: 64.900560 ns
+  Run 6: 64.872650 ns
+  Run 7: 64.928400 ns
+  Run 8: 64.923580 ns
+  Run 9: 64.884130 ns
+  Avg: 64.877971 ns
+Impl 5:
+  Warm-up...
+  Run 0: 92.785510 ns
+  Run 1: 92.773260 ns
+  Run 2: 92.783000 ns
+  Run 3: 92.752420 ns
+  Run 4: 92.732410 ns
+  Run 5: 92.755710 ns
+  Run 6: 92.900600 ns
+  Run 7: 92.718260 ns
+  Run 8: 92.751640 ns
+  Run 9: 92.776200 ns
+  Avg: 92.772901 ns

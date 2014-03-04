@@ -43,7 +43,7 @@ int main2(void) {
 
 int main(void) {
 	double totalTime, d;
-	int i, j;
+	uint32_t i, j;
 	int *digitsArray;
 	const char *const fileName = "random.dat";
 	size_t fileLen = 0;
@@ -73,7 +73,7 @@ int main(void) {
 		exit(3);
 	}
 	fileLen >>= 2;
-	for ( i = 0; i < 4; i++ ) {
+	for ( i = 0; i < sizeof(impls)/sizeof(impls[0]); i++ ) {
 		printf("Impl %d:\n", i);
 		d = 0;
 		printf("  Warm-up...\n");
@@ -98,10 +98,10 @@ int main(void) {
 				totalTime = (double)(endTime - startTime);
 				totalTime /= 1000000;  // convert from uS to S.
 			#endif
-			printf("  Run %d: %f\n", j, totalTime);
+			printf("  Run %d: %f ns\n", j, 1E9*totalTime/(double)fileLen);
 			d += totalTime;
 		}
-		printf("  Avg: %f\n", d / 10.0);
+		printf("  Avg: %f ns\n", 1E8*d/(double)fileLen);
 	}
 	free((void*)digitsArray);
 	free((void*)fileData);
