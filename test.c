@@ -103,8 +103,7 @@ static inline int count4(uint32_t x) {
 
 static char printBuf[11];
 static inline int count5(uint32_t x) {
-	sprintf(printBuf, "%u", x);
-	return (int)strlen(printBuf);
+	return sprintf(printBuf, "%u", x);
 }
 
 void countDigits0(size_t length, const uint32_t *dataArray, int *countArray) {
@@ -170,6 +169,6 @@ void test(void) {
 		1000000000, 1000000001, UINT_MAX
 	};
 	for ( i = 0; i < sizeof(arr)/sizeof(arr[0]); i++ ) {
-		printf("%u: %d\n", arr[i], 23 /*count1(arr[i])*/);
+		//printf("%u: %d\n", arr[i], count5(arr[i]));
 	}
 }
