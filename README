@@ -14,79 +14,159 @@ $ dd if=/dev/urandom of=random.dat bs=4000 count=100000  # 100 million uint32_t
 $ lin.x64/rel/simple-bench
 Impl 0:
   Warm-up...
-  Run 0: 0.687310 ns
-  Run 1: 0.695380 ns
-  Run 2: 0.690230 ns
-  Run 3: 0.690840 ns
-  Run 4: 0.692290 ns
-  Run 5: 0.688610 ns
-  Run 6: 0.690210 ns
-  Run 7: 0.690770 ns
-  Run 8: 0.691580 ns
-  Run 9: 0.727200 ns
-  Avg: 0.694442 ns
+  Run 0: 0.684820 ns
+  Run 1: 0.682420 ns
+  Run 2: 0.687980 ns
+  Run 3: 0.685810 ns
+  Run 4: 0.683270 ns
+  Run 5: 0.682490 ns
+  Run 6: 0.682090 ns
+  Run 7: 0.683120 ns
+  Run 8: 0.683550 ns
+  Run 9: 0.683850 ns
+  Avg: 0.683940 ns
 Impl 1:
   Warm-up...
-  Run 0: 2.288860 ns
-  Run 1: 2.305160 ns
-  Run 2: 2.312670 ns
-  Run 3: 2.327200 ns
-  Run 4: 2.310980 ns
-  Run 5: 2.310500 ns
-  Run 6: 2.314390 ns
-  Run 7: 2.324240 ns
-  Run 8: 2.315560 ns
-  Run 9: 2.306190 ns
-  Avg: 2.311575 ns
+  Run 0: 1.469610 ns
+  Run 1: 1.474660 ns
+  Run 2: 1.472400 ns
+  Run 3: 1.467440 ns
+  Run 4: 1.473520 ns
+  Run 5: 1.470770 ns
+  Run 6: 1.470690 ns
+  Run 7: 1.468120 ns
+  Run 8: 1.469060 ns
+  Run 9: 1.473670 ns
+  Avg: 1.470994 ns
 Impl 2:
   Warm-up...
-  Run 0: 3.052930 ns
-  Run 1: 3.060530 ns
-  Run 2: 3.056160 ns
-  Run 3: 3.079280 ns
-  Run 4: 3.057570 ns
-  Run 5: 3.055550 ns
-  Run 6: 3.069030 ns
-  Run 7: 3.059270 ns
-  Run 8: 3.054050 ns
-  Run 9: 3.060160 ns
-  Avg: 3.060453 ns
+  Run 0: 0.826470 ns
+  Run 1: 0.827110 ns
+  Run 2: 0.826450 ns
+  Run 3: 0.830300 ns
+  Run 4: 0.829260 ns
+  Run 5: 0.824840 ns
+  Run 6: 0.827580 ns
+  Run 7: 0.826910 ns
+  Run 8: 0.828500 ns
+  Run 9: 0.825850 ns
+  Avg: 0.827327 ns
 Impl 3:
   Warm-up...
-  Run 0: 46.217900 ns
-  Run 1: 46.003260 ns
-  Run 2: 46.089930 ns
-  Run 3: 46.010290 ns
-  Run 4: 46.000070 ns
-  Run 5: 46.001600 ns
-  Run 6: 45.978740 ns
-  Run 7: 46.006020 ns
-  Run 8: 45.992950 ns
-  Run 9: 46.006950 ns
-  Avg: 46.030771 ns
+  Run 0: 45.833370 ns
+  Run 1: 45.836640 ns
+  Run 2: 45.937210 ns
+  Run 3: 45.854520 ns
+  Run 4: 45.903370 ns
+  Run 5: 45.848260 ns
+  Run 6: 45.845320 ns
+  Run 7: 45.865300 ns
+  Run 8: 45.862100 ns
+  Run 9: 45.837060 ns
+  Avg: 45.862315 ns
 Impl 4:
   Warm-up...
-  Run 0: 64.835880 ns
-  Run 1: 64.844380 ns
-  Run 2: 64.892150 ns
-  Run 3: 64.800900 ns
-  Run 4: 64.897080 ns
-  Run 5: 64.900560 ns
-  Run 6: 64.872650 ns
-  Run 7: 64.928400 ns
-  Run 8: 64.923580 ns
-  Run 9: 64.884130 ns
-  Avg: 64.877971 ns
+  Run 0: 76.097520 ns
+  Run 1: 76.310420 ns
+  Run 2: 76.175850 ns
+  Run 3: 76.104720 ns
+  Run 4: 76.130350 ns
+  Run 5: 76.124830 ns
+  Run 6: 76.125400 ns
+  Run 7: 76.150020 ns
+  Run 8: 76.098980 ns
+  Run 9: 76.232170 ns
+  Avg: 76.155026 ns
 Impl 5:
   Warm-up...
-  Run 0: 92.785510 ns
-  Run 1: 92.773260 ns
-  Run 2: 92.783000 ns
-  Run 3: 92.752420 ns
-  Run 4: 92.732410 ns
-  Run 5: 92.755710 ns
-  Run 6: 92.900600 ns
-  Run 7: 92.718260 ns
-  Run 8: 92.751640 ns
-  Run 9: 92.776200 ns
-  Avg: 92.772901 ns
+  Run 0: 84.802170 ns
+  Run 1: 84.734750 ns
+  Run 2: 84.756230 ns
+  Run 3: 84.755190 ns
+  Run 4: 84.740220 ns
+  Run 5: 84.839010 ns
+  Run 6: 84.826830 ns
+  Run 7: 84.745040 ns
+  Run 8: 84.733010 ns
+  Run 9: 84.736840 ns
+  Avg: 84.766929 ns
+$ dd if=/dev/zero of=random.dat bs=4000 count=100000  # 100 million zeros
+$ lin.x64/rel/simple-bench
+Impl 0:
+  Warm-up...
+  Run 0: 0.687830 ns
+  Run 1: 0.682220 ns
+  Run 2: 0.681000 ns
+  Run 3: 0.680370 ns
+  Run 4: 0.682440 ns
+  Run 5: 0.682420 ns
+  Run 6: 0.682740 ns
+  Run 7: 0.684670 ns
+  Run 8: 0.682420 ns
+  Run 9: 0.681370 ns
+  Avg: 0.682748 ns
+Impl 1:
+  Warm-up...
+  Run 0: 1.164500 ns
+  Run 1: 1.168700 ns
+  Run 2: 1.167660 ns
+  Run 3: 1.166640 ns
+  Run 4: 1.166930 ns
+  Run 5: 1.167320 ns
+  Run 6: 1.172230 ns
+  Run 7: 1.166370 ns
+  Run 8: 1.166780 ns
+  Run 9: 1.168960 ns
+  Avg: 1.167609 ns
+Impl 2:
+  Warm-up...
+  Run 0: 2.949970 ns
+  Run 1: 2.941670 ns
+  Run 2: 2.944900 ns
+  Run 3: 2.942930 ns
+  Run 4: 3.021460 ns
+  Run 5: 2.943430 ns
+  Run 6: 2.943430 ns
+  Run 7: 2.949320 ns
+  Run 8: 2.948970 ns
+  Run 9: 2.947620 ns
+  Avg: 2.953370 ns
+Impl 3:
+  Warm-up...
+  Run 0: 8.525690 ns
+  Run 1: 8.534220 ns
+  Run 2: 8.525780 ns
+  Run 3: 8.529520 ns
+  Run 4: 8.530520 ns
+  Run 5: 8.527770 ns
+  Run 6: 8.523830 ns
+  Run 7: 8.533060 ns
+  Run 8: 8.523800 ns
+  Run 9: 8.520670 ns
+  Avg: 8.527486 ns
+Impl 4:
+  Warm-up...
+  Run 0: 0.739210 ns
+  Run 1: 0.739810 ns
+  Run 2: 0.737830 ns
+  Run 3: 0.738540 ns
+  Run 4: 0.743370 ns
+  Run 5: 0.740760 ns
+  Run 6: 0.738080 ns
+  Run 7: 0.737610 ns
+  Run 8: 0.738910 ns
+  Run 9: 0.738530 ns
+  Avg: 0.739265 ns
+Impl 5:
+  Warm-up...
+  Run 0: 63.789080 ns
+  Run 1: 63.782260 ns
+  Run 2: 63.796040 ns
+  Run 3: 63.815710 ns
+  Run 4: 63.755540 ns
+  Run 5: 63.766830 ns
+  Run 6: 63.834680 ns
+  Run 7: 63.745140 ns
+  Run 8: 63.857800 ns
+  Run 9: 63.788620 ns
+  Avg: 63.793170 ns
